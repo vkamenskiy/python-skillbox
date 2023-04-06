@@ -15,7 +15,7 @@ python-dotenv = "1.0.0"
 
 
 [tool.pytest.ini_options]
-addopts="--alluredir=allure-results"
+addopts="-vv --alluredir=allure-results"
 
 
 [build-system]
