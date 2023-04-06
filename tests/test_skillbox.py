@@ -15,7 +15,6 @@ from python_skillbox.data import footer, filter
 class TestsAuthorization:
     @allure.severity(Severity.NORMAL)
     @allure.title('Input wrong email format')
-    @pytest.mark.skip()
     def test_wrong_email_format(self, setup_browser):
 
         with allure.step('Open authorization page'):
@@ -77,21 +76,18 @@ class TestsSearch:
         with allure.step('Check for success'):
             app.main_page.check_for_success()
 
-        assert 1==2
+    @allure.severity(Severity.NORMAL)
+    @allure.title('Check search on the webinars page works')
+    def test_search_webinars_work(self, setup_browser):
 
-    # @allure.severity(Severity.NORMAL)
-    # @allure.title('Check search on the webinars page works')
-    # @pytest.mark.skip()
-    # def test_search_webinars_work(self, setup_browser):
-    #
-    #     with allure.step('Open webinars page'):
-    #         app.webinars_page.given_opened()
-    #
-    #     with allure.step('Input search query'):
-    #         app.webinars_page.input_search("Веб-дизайн на Figma: подводим итоги")
-    #
-    #     with allure.step('Check for success'):
-    #         app.webinars_page.check_for_success()
+        with allure.step('Open webinars page'):
+            app.webinars_page.given_opened()
+
+        with allure.step('Input search query'):
+            app.webinars_page.input_search("Веб-дизайн на Figma: подводим итоги")
+
+        with allure.step('Check for success'):
+            app.webinars_page.check_for_success()
 
 
 @allure.tag("ui", "web")
@@ -120,17 +116,16 @@ class TestFooter:
 class TestWebinars:
     @allure.severity(Severity.TRIVIAL)
     @allure.title('36 webinars are visible on the page')
-    # def test_36_webinars_are_visible_on_the_page(self, setup_browser):
-    #
-    #     with allure.step('Open webinars page'):
-    #         app.webinars_page.given_opened()
-    #
-    #     with allure.step('Check standart count'):
-    #         app.webinars_page.check_standard_count()
+    def test_36_webinars_are_visible_on_the_page(self, setup_browser):
+
+        with allure.step('Open webinars page'):
+            app.webinars_page.given_opened()
+
+        with allure.step('Check standart count'):
+            app.webinars_page.check_standard_count()
 
     @allure.severity(Severity.TRIVIAL)
     @allure.title('Another 36 webinars are visible on the page')
-    @pytest.mark.skip()
     def test_another_36_webinars_are_visible_on_the_page(self, setup_browser):
 
         with allure.step('Open webinars page'):
@@ -160,17 +155,15 @@ class TestFilter:
         with allure.step('Check filter tags'):
             app.webinars_page.check_filter_tags(filter.tags)
 
-        assert 1==2
+    @allure.severity(Severity.TRIVIAL)
+    @allure.title('Playlists filter tags display correctly')
+    def test_playlists_filter_tags_display_correctly(self, setup_browser):
 
-    # @allure.severity(Severity.TRIVIAL)
-    # @allure.title('Playlists filter tags display correctly')
-    # def test_playlists_filter_tags_display_correctly(self, setup_browser):
-    #
-    #     with allure.step('Open playlists page'):
-    #         app.playlists_page.given_opened()
-    #
-    #     with allure.step('Check filter tags'):
-    #         app.playlists_page.check_filter_tags(filter.tags)
+        with allure.step('Open playlists page'):
+            app.playlists_page.given_opened()
+
+        with allure.step('Check filter tags'):
+            app.playlists_page.check_filter_tags(filter.tags)
 
     @allure.severity(Severity.TRIVIAL)
     @allure.title('Timetable filter tags display correctly')
@@ -181,5 +174,3 @@ class TestFilter:
 
         with allure.step('Check filter tags'):
             app.timetable_page.check_filter_tags(filter.tags)
-
-        # assert 1==2
