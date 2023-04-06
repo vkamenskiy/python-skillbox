@@ -76,7 +76,7 @@ class TestsSearch:
             app.main_page.check_for_success()
 
     @allure.severity(Severity.NORMAL)
-    @allure.title('Check password recovery work')
+    @allure.title('Check search on the webinars page works')
     def test_search_webinars_work(self, setup_browser):
 
         with allure.step('Open webinars page'):
