@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "python-skillbox"
+version = "0.1.0"
+description = ""
+authors = ["Vladislav <djefry.kamen@gmail.com>"]
+readme = "README.md"
+packages = [{include = "python_skillbox"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+pytest = "^7.2.2"
+selene = "2.0.0b17"
+allure-pytest = "^2.13.0"
+python-dotenv = "1.0.0"
+
+
+[tool.pytest.ini_options]
+addopts="--alluredir=allure-results"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
