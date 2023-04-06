@@ -77,19 +77,21 @@ class TestsSearch:
         with allure.step('Check for success'):
             app.main_page.check_for_success()
 
-    @allure.severity(Severity.NORMAL)
-    @allure.title('Check search on the webinars page works')
-    @pytest.mark.skip()
-    def test_search_webinars_work(self, setup_browser):
+        assert 1==2
 
-        with allure.step('Open webinars page'):
-            app.webinars_page.given_opened()
-
-        with allure.step('Input search query'):
-            app.webinars_page.input_search("Веб-дизайн на Figma: подводим итоги")
-
-        with allure.step('Check for success'):
-            app.webinars_page.check_for_success()
+    # @allure.severity(Severity.NORMAL)
+    # @allure.title('Check search on the webinars page works')
+    # @pytest.mark.skip()
+    # def test_search_webinars_work(self, setup_browser):
+    #
+    #     with allure.step('Open webinars page'):
+    #         app.webinars_page.given_opened()
+    #
+    #     with allure.step('Input search query'):
+    #         app.webinars_page.input_search("Веб-дизайн на Figma: подводим итоги")
+    #
+    #     with allure.step('Check for success'):
+    #         app.webinars_page.check_for_success()
 
 
 @allure.tag("ui", "web")
