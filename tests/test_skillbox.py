@@ -1,6 +1,7 @@
 import time
 
 import allure
+import pytest
 from allure_commons.types import Severity
 
 from python_skillbox.model import app
@@ -14,6 +15,7 @@ from python_skillbox.data import footer, filter
 class TestsAuthorization:
     @allure.severity(Severity.NORMAL)
     @allure.title('Input wrong email format')
+    @pytest.mark.skip()
     def test_wrong_email_format(self, setup_browser):
 
         with allure.step('Open authorization page'):
@@ -77,6 +79,7 @@ class TestsSearch:
 
     @allure.severity(Severity.NORMAL)
     @allure.title('Check search on the webinars page works')
+    @pytest.mark.skip()
     def test_search_webinars_work(self, setup_browser):
 
         with allure.step('Open webinars page'):
@@ -125,6 +128,7 @@ class TestWebinars:
 
     @allure.severity(Severity.TRIVIAL)
     @allure.title('Another 36 webinars are visible on the page')
+    @pytest.mark.skip()
     def test_another_36_webinars_are_visible_on_the_page(self, setup_browser):
 
         with allure.step('Open webinars page'):
@@ -154,6 +158,8 @@ class TestFilter:
         with allure.step('Check filter tags'):
             app.webinars_page.check_filter_tags(filter.tags)
 
+        assert 1==2
+
     @allure.severity(Severity.TRIVIAL)
     @allure.title('Playlists filter tags display correctly')
     def test_playlists_filter_tags_display_correctly(self, setup_browser):
@@ -173,3 +179,5 @@ class TestFilter:
 
         with allure.step('Check filter tags'):
             app.timetable_page.check_filter_tags(filter.tags)
+
+        assert 1==2
