@@ -128,7 +128,7 @@ class TestWebinars:
 
     @allure.severity(Severity.TRIVIAL)
     @allure.title('Another 36 webinars are visible on the page')
-    @pytest.mark.skip()
+    # @pytest.mark.skip()
     def test_another_36_webinars_are_visible_on_the_page(self, setup_browser):
 
         with allure.step('Open webinars page'):
@@ -180,4 +180,4 @@ class TestFilter:
         with allure.step('Check filter tags'):
             app.timetable_page.check_filter_tags(filter.tags)
 
-        assert 1==2
+        # assert 1==2
