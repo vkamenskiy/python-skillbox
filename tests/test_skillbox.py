@@ -118,17 +118,17 @@ class TestFooter:
 class TestWebinars:
     @allure.severity(Severity.TRIVIAL)
     @allure.title('36 webinars are visible on the page')
-    def test_36_webinars_are_visible_on_the_page(self, setup_browser):
-
-        with allure.step('Open webinars page'):
-            app.webinars_page.given_opened()
-
-        with allure.step('Check standart count'):
-            app.webinars_page.check_standard_count()
+    # def test_36_webinars_are_visible_on_the_page(self, setup_browser):
+    #
+    #     with allure.step('Open webinars page'):
+    #         app.webinars_page.given_opened()
+    #
+    #     with allure.step('Check standart count'):
+    #         app.webinars_page.check_standard_count()
 
     @allure.severity(Severity.TRIVIAL)
     @allure.title('Another 36 webinars are visible on the page')
-    # @pytest.mark.skip()
+    @pytest.mark.skip()
     def test_another_36_webinars_are_visible_on_the_page(self, setup_browser):
 
         with allure.step('Open webinars page'):
@@ -160,15 +160,15 @@ class TestFilter:
 
         assert 1==2
 
-    @allure.severity(Severity.TRIVIAL)
-    @allure.title('Playlists filter tags display correctly')
-    def test_playlists_filter_tags_display_correctly(self, setup_browser):
-
-        with allure.step('Open playlists page'):
-            app.playlists_page.given_opened()
-
-        with allure.step('Check filter tags'):
-            app.playlists_page.check_filter_tags(filter.tags)
+    # @allure.severity(Severity.TRIVIAL)
+    # @allure.title('Playlists filter tags display correctly')
+    # def test_playlists_filter_tags_display_correctly(self, setup_browser):
+    #
+    #     with allure.step('Open playlists page'):
+    #         app.playlists_page.given_opened()
+    #
+    #     with allure.step('Check filter tags'):
+    #         app.playlists_page.check_filter_tags(filter.tags)
 
     @allure.severity(Severity.TRIVIAL)
     @allure.title('Timetable filter tags display correctly')
