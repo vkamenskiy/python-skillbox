@@ -1,7 +1,6 @@
 import time
 
 import allure
-import pytest
 from allure_commons.types import Severity
 
 from python_skillbox.model import app
