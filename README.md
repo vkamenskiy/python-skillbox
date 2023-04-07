@@ -38,7 +38,7 @@
   <code><img width="5%" title="Selenoid" src="images/logo/selenoid.png"></code>
   <code><img width="5%" title="Allure Report" src="images/logo/allure_report.png"></code>
   <code><img width="5%" title="Allure TestOps" src="images/logo/allure_testops.png"></code>
-  <code><img width="5%" title="Jira" src="images/logo/jira.png"></code>
+<!--   <code><img width="5%" title="Jira" src="images/logo/jira.png"></code> -->
   <code><img width="5%" title="Telegram" src="images/logo/tg.png"></code>
 </p>
 
@@ -56,6 +56,7 @@
 - [x] Проверка ввода неверного email и пароля
 - [x] Проверка восстановления пароля
 
+<!-- Jenkins -->
 
 ## <img width="5%" title="Jenkins" src="images/logo/jenkins.png"> Запуск тестов из [Jenkins](https://jenkins.autotests.cloud/job/003_t1me0ver_python_skillbox/)
 
@@ -69,6 +70,8 @@
 <p><img src="images/screenshots/Jenkins-2.png" alt="Jenkins"/></p>
 
 3. Нажмите "Собрать"
+
+<!-- Локальный запуск -->
 
 ## :computer: Локальный запуск 
 
@@ -85,6 +88,8 @@ pytest --browser_name={BROWSER_NAME} --browser_version={BROWSER_VERSION} --allur
 
 > - BROWSER_NAME — браузер _(Chrome, Firefox)_, по умолчанию Chrome
 > - BROWSER_VERSION — версия браузера _(chrome: 100.0, 99.0; firefox: 98.0, 97.0)_, по умолчанию 100.0
+
+<!-- Отчеты -->
 
 ## :bar_chart: Отчеты о прохождении тестов доступны в Allure
 
@@ -104,6 +109,8 @@ allure serve
 Настроена отправка отчета в Telegram
 
 <img src="images/screenshots/Telegramm-1.png" alt="Telegram"/>
+
+<!-- Allure TestOps -->
 
 ## :briefcase: Проект интегрирован с Allure TestOps 
 
